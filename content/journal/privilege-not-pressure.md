@@ -1,11 +1,10 @@
 ---
 title: Privilege not pressure
-date:
-# Change the category if this belongs somewhere else: design, business, case-studies or studio
-category: business
+date: 2026-11-16
+category: studio
 summary: One or two sentences shown on the Journal page.
 author: Lauren Young
 draft: true
 ---
+"What a privilege it is to be busy with the life you've always wanted".
 
-Write the article here. Drafts only show when previewing on your own computer.
