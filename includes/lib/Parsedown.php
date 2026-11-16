@@ -13,6 +13,9 @@
 #
 #
 
+# Green Smoke Studio change: "array $Block = null" made "?array $Block = null" in
+# blockSetextHeader() and blockTable(), so PHP 8.4 and newer print no deprecation warning.
+
 class Parsedown
 {
     # ~
@@ -712,7 +715,7 @@ class Parsedown
     #
     # Setext
 
-    protected function blockSetextHeader($Line, array $Block = null)
+    protected function blockSetextHeader($Line, ?array $Block = null)
     {
         if ( ! isset($Block) or isset($Block['type']) or isset($Block['interrupted']))
         {
@@ -850,7 +853,7 @@ class Parsedown
     #
     # Table
 
-    protected function blockTable($Line, array $Block = null)
+    protected function blockTable($Line, ?array $Block = null)
     {
         if ( ! isset($Block) or isset($Block['type']) or isset($Block['interrupted']))
         {
