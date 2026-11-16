@@ -3,6 +3,20 @@ $title = 'Work';
 $description = 'Selected branding, print, digital and web design projects by Green Smoke Studio, an independent design studio in Ponteland, Northumberland.';
 $wfPage = '663f662d6aff4cbce581dee9';
 require __DIR__ . '/includes/head.php';
+require_once __DIR__ . '/includes/content.php';
+
+// Projects come from content/work/. ?tag=web-design shows only that tag.
+$allProjects = work_projects();
+$activeTag = valid_slug($_GET['tag'] ?? '') ? $_GET['tag'] : '';
+$projects = array_values(array_filter($allProjects, function ($p) use ($activeTag) {
+    return $activeTag === '' || in_array($activeTag, array_map('tag_slug', $p['tags']), true);
+}));
+
+// Filter buttons: the tags from config.php that at least one project uses.
+$usedTags = array_map('tag_slug', array_merge([], ...array_column($allProjects, 'tags')));
+$tagsInUse = array_filter($workTags, function ($tag) use ($usedTags) {
+    return in_array(tag_slug($tag), $usedTags, true);
+});
 ?>
   <div class="section">
   <div class="wrapper m0-100">
@@ -35,36 +49,28 @@ require __DIR__ . '/includes/head.php';
       </div>
     </div>
   </div>
-  <div class="section wrapper m100">
-    <div class="w-layout-grid content1-grid">
-      <div id="w-node-_869b0a0f-0c63-41ae-731a-3811835a5b45-e581dee9" class="content1-column">
-        <div class="content1-content-wrap">
-          <div class="content1-image-wrap">
-            <div class="content1-image"></div>
-          </div>
-          <h4>Web design and User Experience</h4>
-          <div>
-            <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="https://www.behance.net/greensmokestudio" target="_blank" class="button-text w-inline-block">
-            <div class="button-label">Explore Waiheke Marina project</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow">
-          </a>
-        </div>
-        </div>
-      </div>
-      <div id="w-node-_869b0a0f-0c63-41ae-731a-3811835a5b4d-e581dee9" class="content1-column">
-        <div class="content1-content-wrap content1-right-column">
-          <div class="content1-image-wrap">
-            <div class="content1-image2"></div>
-          </div>
-          <h4>Design for print</h4>
-          <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="https://www.behance.net/greensmokestudio" target="_blank" class="button-text w-inline-block">
-            <div class="button-label">Explore Living North project</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow">
-        </div>
-      </a>
-        <div class="content1-quote-wrap">
-          <div class="content-quote"><quote>“Always able to offer advice, inspiration or technical guidance. Lauren is <em>patient</em>, <em>kind</em> and <em>talented</em>.”</quote></div>
-          <h6>EMILY CULYER - DEPARTMENT FOR EDUCATION</h6>
-        </div>
-      </div>
+  <div class="section wrapper m100" id="projects">
+    <div class="work-container">
+    <div class="blog1-headline-wrap">
+      <h4>Selected work</h4>
+      <h3>Recent projects</h3>
+    </div>
+    <nav class="work-filters" aria-label="Filter projects by type">
+      <a href="/work#projects" class="journal-category-link"<?= $activeTag === '' ? ' aria-current="page"' : '' ?>>All</a>
+<?php foreach ($tagsInUse as $tag): ?>
+      <a href="/work?tag=<?= e(tag_slug($tag)) ?>#projects" class="journal-category-link"<?= $activeTag === tag_slug($tag) ? ' aria-current="page"' : '' ?>><?= e($tag) ?></a>
+<?php endforeach; ?>
+    </nav>
+    <div class="work-grid">
+<?php foreach ($projects as $project): include __DIR__ . '/templates/work-card.php'; endforeach; ?>
+<?php if (!$projects): ?>
+      <p>No projects with this tag yet. <a href="/work#projects">See all projects</a>.</p>
+<?php endif; ?>
+    </div>
+    <div class="content1-quote-wrap">
+      <div class="content-quote"><quote>“Always able to offer advice, inspiration or technical guidance. Lauren is <em>patient</em>, <em>kind</em> and <em>talented</em>.”</quote></div>
+      <h6>EMILY CULYER - DEPARTMENT FOR EDUCATION</h6>
+    </div>
     </div>
   </div>
   <div class="section wrapper m100">
