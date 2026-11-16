@@ -6,45 +6,22 @@
     --black: #000
 }
 
-/* Lato (Google Fonts, SIL Open Font Licence: fonts/Lato-OFL-LICENSE.txt),
-   stored on this site. Light (300) is the main text weight. */
+/* Open Sans (Google Fonts, SIL Open Font Licence: fonts/OpenSans-OFL-LICENSE.txt),
+   stored on this site. One variable file per style holds every weight from
+   Light (300) to Extra Bold (800); Light (300) is the main text weight. */
 @font-face {
-    font-family: 'Lato';
-    src: url('../fonts/lato-latin-300-normal.woff2') format('woff2');
-    font-weight: 300;
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans-latin-wght-normal.woff2') format('woff2');
+    font-weight: 300 800;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('../fonts/lato-latin-300-italic.woff2') format('woff2');
-    font-weight: 300;
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans-latin-wght-italic.woff2') format('woff2');
+    font-weight: 300 800;
     font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/lato-latin-400-normal.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/lato-latin-400-italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/lato-latin-700-normal.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
     font-display: swap;
 }
 
@@ -161,7 +138,7 @@ h4 {
     opacity: .7;
     margin-top: 30px;
     margin-bottom: 15px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 32px
@@ -170,7 +147,7 @@ h4 {
 h5 {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px
@@ -179,7 +156,7 @@ h5 {
 h6 {
     opacity: .7;
     text-transform: uppercase;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
@@ -192,7 +169,7 @@ p {
     opacity: .7;
     color: var(--18181d);
     margin-bottom: 10px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px
@@ -274,7 +251,7 @@ blockquote {
 .size1-text.size1-top-clear {
     color: var(--18181d);
     margin-top: 0;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 300
 }
 
@@ -330,7 +307,7 @@ blockquote {
     min-height: 900px;
     margin-left: auto;
     margin-right: auto;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     position: relative;
     top: 0;
     bottom: 0;
@@ -608,7 +585,7 @@ blockquote {
     margin-left: 10px;
     margin-right: 10px;
     padding: 0;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 300
 }
 
@@ -645,7 +622,7 @@ blockquote {
 .button-small.form-centered-button {
     text-transform: capitalize;
     justify-content: center;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500
 }
 
@@ -668,7 +645,7 @@ blockquote {
     align-items: center;
     padding-left: 36px;
     padding-right: 36px;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .section.wrapper {
@@ -691,13 +668,13 @@ blockquote {
 
 .button-label {
     text-transform: none;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500
 }
 
 .second-button-label {
     text-transform: none;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500;
     padding-left: 15px;
 }
@@ -888,7 +865,7 @@ blockquote {
     opacity: .7;
     color: #18181d;
     margin-bottom: 10px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
@@ -917,7 +894,7 @@ footer {
     text-transform: none;
     margin-top: 10px;
     margin-bottom: 15px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 30px;
     font-weight: 300;
     line-height: 38px
@@ -939,7 +916,7 @@ footer {
 .footer2-bottom-link {
     opacity: .7;
     color: #18181d;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 14px;
     line-height: 22px;
     text-decoration: none;
@@ -952,7 +929,7 @@ footer {
 
 .footer2-bottom-link.footer2-copyright-link {
     margin-right: 30px;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .content {
@@ -1033,12 +1010,12 @@ footer {
     margin-bottom: 15px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .paragraph-small {
     text-transform: none;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 14px;
     line-height: 22px
 }
@@ -1080,7 +1057,7 @@ footer {
     border: 1px solid rgba(170, 170, 170, .2);
     margin-bottom: 10px;
     padding: 10px 22px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 20px;
@@ -1213,7 +1190,7 @@ footer {
 
 .subheadline-paragraph {
     color: rgba(24, 24, 29, .7);
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size2-link {
@@ -1229,20 +1206,20 @@ footer {
 .size2-link.size2-bottom-clear {
     color: var(--18181d);
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size2-link.size2-full-clear {
     color: var(--18181d);
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size2-link.size2-top-clear {
     color: var(--18181d);
     margin-top: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .item-wrap {
@@ -1253,7 +1230,7 @@ footer {
 
 .text-block {
     text-transform: capitalize;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500
 }
 
@@ -1264,7 +1241,7 @@ footer {
 .size2-text {
     margin-top: 20px;
     margin-bottom: 25px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 38px;
     font-weight: 300;
     line-height: 46px
@@ -1321,17 +1298,17 @@ footer {
 .size6-link.size6-full-clear {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size6-link.size6-top-clear {
     margin-top: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size6-link.size6-bottom-clear {
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .heading-3 {
@@ -1340,7 +1317,7 @@ footer {
 
 .text-block-4 {
     text-transform: capitalize;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 600
 }
 
@@ -1361,32 +1338,32 @@ footer {
 .size4-link.size4-bottom-clear {
     color: var(--18181d);
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size4-link.size4-full-clear {
     color: var(--18181d);
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size4-link.size4-top-clear {
     color: var(--18181d);
     margin-top: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .paragraph-small-70 {
     opacity: .7;
     text-transform: none;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 14px;
     line-height: 22px
 }
 
 .list-item {
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .checkbox-field {
@@ -1420,7 +1397,7 @@ footer {
 .size6-text {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 26px
@@ -1485,7 +1462,7 @@ footer {
     opacity: .7;
     color: #18181d;
     margin-bottom: 10px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     text-decoration: none;
     display: inline
 }
@@ -1496,7 +1473,7 @@ footer {
 }
 
 .heading-6 {
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 44px;
     font-weight: 300;
     line-height: 52px
@@ -1527,14 +1504,14 @@ footer {
 .size5-link.size5-top-clear {
     color: var(--18181d);
     margin-top: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size5-link.size5-full-clear {
     color: var(--18181d);
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size3-link {
@@ -1554,23 +1531,23 @@ footer {
 
 .size3-link.size3-top-clear {
     margin-top: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .size3-link.size3-full-clear {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .block-quote {
-    font-family: Lato, sans-serif
+    font-family: Open Sans, sans-serif
 }
 
 .text-block-3,
 .text-block-2 {
     text-transform: capitalize;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500
 }
 
@@ -1582,7 +1559,7 @@ footer {
 
 .text-block-9 {
     text-transform: capitalize;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500
 }
 
@@ -1605,13 +1582,13 @@ footer {
 .size1.size1-top-clear {
     color: var(--18181d);
     margin-top: 0;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 300
 }
 
 .text-block-10 {
     text-transform: capitalize;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500
 }
 
@@ -1640,13 +1617,13 @@ footer {
 
 .paragraph-small-72 {
     text-transform: none;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 14px;
     line-height: 22px
 }
 
 .head {
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 300
 }
 
@@ -1658,7 +1635,7 @@ footer {
 }
 
 .heading-13 {
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 300
 }
 
@@ -1678,7 +1655,7 @@ footer {
     opacity: .7;
     color: var(--18181d);
     margin-bottom: 10px;
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
@@ -1690,7 +1667,7 @@ footer {
 }
 
 .heading-22 {
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 300;
 }
 
