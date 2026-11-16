@@ -58,6 +58,51 @@ bash dev/make-image-sizes.sh images/work/my-project.jpg
    ```
 3. Open http://localhost:8000. Press `Ctrl` + `C` in Terminal to stop.
 
+## Publishing
+
+The site publishes itself. Whenever `main` changes (for example when you merge
+a pull request, or commit straight to `main`), GitHub:
+
+1. **Checks the site**: every page must load with no PHP errors.
+2. **Uploads only what changed** to Krystal over SFTP. Files removed from the
+   repo are removed from the server too, but nothing else on the server is
+   touched.
+
+Watch it in the repo's **Actions** tab. A green tick means it's live (usually
+within a minute or two); a red cross means nothing was uploaded, and the
+details say why. Pull requests get the check too, but are never uploaded.
+
+### Roll back to an earlier version
+
+1. Find the commit you want: on GitHub, click **Commits** (or use History in
+   GitHub Desktop) and copy its ID, e.g. `3117ea6`.
+2. **Actions** → **Deploy to Krystal** → **Run workflow**, paste the ID in
+   "Version to publish", and click **Run workflow**.
+
+The site then matches that version exactly. The next change merged to `main`
+publishes the latest version again, so also undo the bad change on `main`
+(in GitHub Desktop: right-click the commit → **Revert changes in commit**).
+
+Tick "Only list what would change" to see what a run would do without
+uploading anything.
+
+### One-time setup
+
+In the GitHub repo: **Settings** → **Secrets and variables** → **Actions** →
+**New repository secret**. Add:
+
+| Name | Value |
+| --- | --- |
+| `SFTP_HOST` | Your Krystal server's address (in your Krystal welcome email or client area) |
+| `SFTP_USER` | Your cPanel username |
+| `SFTP_PASSWORD` | Your cPanel password |
+| `SFTP_KNOWN_HOSTS` | The server's identity, so uploads can only go to the real server. In Terminal run `ssh-keyscan -p 722 YOUR-SERVER-ADDRESS` and paste everything it prints |
+
+Secrets can't be read back by anyone, including you, once saved. If you change
+your cPanel password, update `SFTP_PASSWORD` too.
+
+In cPanel, **MultiPHP Manager** should have the site on PHP 8.3 or newer.
+
 ## Site details
 
 The address, email, company number and social links live in
@@ -72,3 +117,4 @@ The address, email, company number and social links live in
 | `templates/` | Layouts for Journal pages and Work cards |
 | `css/`, `js/`, `fonts/`, `images/` | Styles, scripts, fonts and images |
 | `dev/` | Tools and checks, not uploaded to the live site |
+| `.github/workflows/` | The automatic publishing set-up |

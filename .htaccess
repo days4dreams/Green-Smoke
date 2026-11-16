@@ -1,7 +1,15 @@
 # Green Smoke Studio — web server rules (Apache, Krystal cPanel hosting)
 # router.php copies these rules for local previews, so update both together.
 
+# The homepage is index.php. Without this, an old index.html left on the
+# server would be shown instead.
+DirectoryIndex index.php
+
 RewriteEngine On
+
+# Hidden files (e.g. the deploy record .deploy-manifest) are never served.
+# .well-known is allowed: it's used for security certificates.
+RewriteRule (^|/)\.(?!well-known/) - [R=404,L]
 
 # Folders like /the-journal/ share a name with pages like the-journal.php.
 # Stop Apache adding a trailing slash to /the-journal, so the page loads directly.
