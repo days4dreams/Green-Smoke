@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Green Smoke Studio</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="css/webflow.min.css" rel="stylesheet" type="text/css">
-  <link href="css/style.min.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
-  <?php $pagedepth = 0; ?>
-</head>
-<body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar active-navigation w-nav">
-    <?php include "includes/nav.php" ?>
-  </div>
+<?php
+$title = 'Graphic, web and UX design in Ponteland, Northumberland';
+$description = 'Green Smoke Studio is an independent design studio in Ponteland, Northumberland, offering considered graphic, print, digital, web and user experience design.';
+require __DIR__ . '/includes/head.php';
+?>
   <div class="wrapper m0-100">
     <div class="hero-with-background-wrap hero2-wrap">
       <div class="w-layout-grid hero2-grid">
@@ -23,20 +11,20 @@
             <h1>Design that is <span class="text-span">considered</span> as well as <span class="text-span">creative</span>.</h1>
             <h5>Meet Green Smoke Studio. For print, digital, web and user experience design.</h5>
           </div>
-          <a href="#" class="hero-latest w-inline-block">
+          <a href="/the-journal" class="hero-latest w-inline-block">
             <div class="hero2-image-collection"></div>
             <div>
               <h5>The Journal</h5>
               <div class="text-block-12">A place to share good news stories, updates from the studio and helpful advice on design and web topics.</div>
             </div>
           </a>
-          <a href="the-journal" data-w-id="b57a745b-9d24-e8be-e6f9-e49ad3fddd2e" class="button-large hero3-button w-inline-block">
-            <div class="text-block-5">Browse articles from The Journal</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dd_Arrow%402x.svg" alt="" class="button-arrow">
+          <a href="/the-journal" data-w-id="b57a745b-9d24-e8be-e6f9-e49ad3fddd2e" class="button-large hero3-button w-inline-block">
+            <div class="text-block-5">Browse articles from The Journal</div><img src="/images/arrow-light2x.svg" alt="" class="button-arrow">
           </a>
         </div>
         <div id="w-node-b57a745b-9d24-e8be-e6f9-e49ad3fddd32-e38d26fc" class="hero-image">
-          <a href="services" class="hero-link-wrap w-inline-block">
-            <div class="hero2-product-name">Explore services</div><img src="images/arrow-dark2x.svg" alt="" class="button-arrow">
+          <a href="/services" class="hero-link-wrap w-inline-block">
+            <div class="hero2-product-name">Explore services</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow">
           </a>
         </div>
       </div>
@@ -52,8 +40,8 @@
           <h6>12 YEARS OF DESIGN EXPERIENCE</h6>
           <h2>I design and create in a way that looks good and does good.</h2>
         </div>
-        <a href="work" data-w-id="63fc4bd2-b787-ab35-1a25-d998b7603093" class="button-small w-inline-block">
-          <div class="button-h6">View recent work</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dd_Arrow%402x.svg" alt="" class="button-arrow">
+        <a href="/work" data-w-id="63fc4bd2-b787-ab35-1a25-d998b7603093" class="button-small w-inline-block">
+          <div class="button-h6">View recent work</div><img src="/images/arrow-light2x.svg" alt="" class="button-arrow">
         </a>
       </div>
     <p id="w-node-_63fc4bd2-b787-ab35-1a25-d998b7603097-e38d26fc">Whether you’re building a brand, in search of creative support, or have a digital project to deliver, I&#x27;m here to help. Together, we can design products and services that are sustainably made, ethically sourced, accessible and inclusive.<br><br>I believe in doing things - big or small - that make the world a bit of a better place, and support others to do the same. I belong to a community who are a force for good. Who reduce, re-use, repair, recover and recycle.<br><br>I help others to stop wasting time, money and resources. I ask ‘Could it be made better? More beautiful? For longer? For less cost to the planet and the customer?’</p>
@@ -106,8 +94,8 @@
             </div>
           </div>
         </div>
-        <a href="services" data-w-id="77bbd182-468a-7062-eb51-db8b392669c1" class="button-small w-inline-block">
-          <div class="button-h6">Explore services</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dd_Arrow%402x.svg" alt="" class="button-arrow">
+        <a href="/services" data-w-id="77bbd182-468a-7062-eb51-db8b392669c1" class="button-small w-inline-block">
+          <div class="button-h6">Explore services</div><img src="/images/arrow-light2x.svg" alt="" class="button-arrow">
         </a>
       </div>
     </div>
@@ -137,8 +125,4 @@
       </div>
     </div>
   </div>
-  <div class="wrapper m0-50">
-        <?php include "includes/footer.php" ?>
-  </div>
-</body>
-</html>
+<?php include __DIR__ . '/includes/footer.php'; ?>

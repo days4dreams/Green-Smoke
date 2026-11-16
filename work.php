@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html data-wf-page="663f662d6aff4cbce581dee9" data-wf-site="663f659b3bb82a36e38d26f1">
-<head>
-  <meta charset="utf-8">
-  <title>Work</title>
-  <meta content="Work" property="og:title">
-  <meta content="Work" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
-  <?php $pagedepth = 0; ?>
-</head>
-<body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar active-navigation w-nav">
-    <?php include "includes/nav.php" ?>
-  </div>
+<?php
+$title = 'Work';
+$description = 'Selected branding, print, digital and web design projects by Green Smoke Studio, an independent design studio in Ponteland, Northumberland.';
+$wfPage = '663f662d6aff4cbce581dee9';
+require __DIR__ . '/includes/head.php';
+?>
   <div class="section">
   <div class="wrapper m0-100">
     <div class="w-layout-grid hero3">
@@ -27,7 +14,7 @@
       </div>
       <div id="w-node-b19f3a35-5a6e-9d07-f59d-77ddb478b147-e581dee9" class="hero3-image"></div>
       <a id="w-node-b19f3a35-5a6e-9d07-f59d-77ddb478b148-e581dee9" data-w-id="b19f3a35-5a6e-9d07-f59d-77ddb478b148" href="https://www.behance.net/greensmokestudio?log_shim_removal=1" target="_blank" class="button-large hero2-button w-inline-block">
-        <div class="text-block-7">Visit my Behance portfolio</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dd_Arrow%402x.svg" alt="" class="button-arrow">
+        <div class="text-block-7">Visit my Behance portfolio</div><img src="/images/arrow-light2x.svg" alt="" class="button-arrow">
       </a>
     </div>
   </div>
@@ -42,7 +29,7 @@
         </div>
         <div>
           <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="https://www.behance.net/greensmokestudio" target="_blank" class="button-text w-inline-block">
-            <div class="button-label">See my recent work</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dc_arrow-dark%402x.svg" alt="" class="button-arrow">
+            <div class="button-label">See my recent work</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow">
           </a>
         </div>
       </div>
@@ -58,7 +45,7 @@
           <h4>Web design and User Experience</h4>
           <div>
             <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="https://www.behance.net/greensmokestudio" target="_blank" class="button-text w-inline-block">
-            <div class="button-label">Explore Waiheke Marina project</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dc_arrow-dark%402x.svg" alt="" class="button-arrow">
+            <div class="button-label">Explore Waiheke Marina project</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow">
           </a>
         </div>
         </div>
@@ -70,7 +57,7 @@
           </div>
           <h4>Design for print</h4>
           <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="https://www.behance.net/greensmokestudio" target="_blank" class="button-text w-inline-block">
-            <div class="button-label">Explore Living North project</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dc_arrow-dark%402x.svg" alt="" class="button-arrow">
+            <div class="button-label">Explore Living North project</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow">
         </div>
       </a>
         <div class="content1-quote-wrap">
@@ -116,8 +103,4 @@
       </div>
     </div>
   </div>
-  <div class="wrapper m0-50">
-    <?php include "includes/footer.php" ?>
-  </div>
-</body>
-</html>
+<?php include __DIR__ . '/includes/footer.php'; ?>

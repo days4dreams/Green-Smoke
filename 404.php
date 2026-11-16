@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html data-wf-page="6641f8343f7a005d7550b3cc" data-wf-site="663f659b3bb82a36e38d26f1">
-<head>
-  <meta charset="utf-8">
-  <title>Not Found</title>
-  <meta content="Not Found" property="og:title">
-  <meta content="Not Found" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
-  <?php $pagedepth = 0; ?>
-</head>
-<body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar active-navigation w-nav">
-    <?php include "includes/nav.php" ?>
-  </div>
+<?php
+$title = 'Page not found';
+$description = 'The page you were looking for has been deleted, moved or doesn\'t exist.';
+$wfPage = '6641f8343f7a005d7550b3cc';
+http_response_code(404); // tell browsers and Google this page doesn't exist
+require __DIR__ . '/includes/head.php';
+?>
   <div class="wrapper m100-50">
     <div class="section">
       <div class="w-layout-grid headline-grid">
@@ -28,8 +16,4 @@
       </div>
     </div>
   </div>
-  <div class="wrapper m0-50">
-        <?php include "includes/footer.php" ?>
-  </div>
-</body>
-</html>
+<?php include __DIR__ . '/includes/footer.php'; ?>
