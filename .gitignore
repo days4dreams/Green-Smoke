@@ -1,0 +1,11 @@
+# Mac and system junk
+.DS_Store
+__MACOSX/
+Thumbs.db
+
+# Server logs
+*.log
+
+# Editor folders
+.vscode/
+.idea/

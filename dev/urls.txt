@@ -1,0 +1,11 @@
+/
+/work
+/services
+/contact
+/privacy-policy
+/the-journal
+/the-journal/design
+/the-journal/business
+/the-journal/studio
+/the-journal/design/design-for-all
+/the-journal/business/have-you-considered-recognition
