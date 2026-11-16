@@ -7,5 +7,6 @@
 /the-journal/design
 /the-journal/business
 /the-journal/studio
+/the-journal/case-studies
 /the-journal/design/design-for-all
 /the-journal/business/have-you-considered-recognition

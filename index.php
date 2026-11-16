@@ -2,6 +2,13 @@
 $title = 'Graphic, web and UX design in Ponteland, Northumberland';
 $description = 'Green Smoke Studio is an independent design studio in Ponteland, Northumberland, offering considered graphic, print, digital, web and user experience design.';
 require __DIR__ . '/includes/head.php';
+require_once __DIR__ . '/includes/content.php';
+
+// The newest published Journal post, for the "latest" link in the hero.
+$latest = null;
+foreach (journal_posts() as $p) {
+    if ($p['has_page'] && $p['draft'] !== true) { $latest = $p; break; }
+}
 ?>
   <div class="wrapper m0-100">
     <div class="hero-with-background-wrap hero2-wrap">
@@ -11,11 +18,11 @@ require __DIR__ . '/includes/head.php';
             <h1>Design that is <span class="text-span">considered</span> as well as <span class="text-span">creative</span>.</h1>
             <h5>Meet Green Smoke Studio. For print, digital, web and user experience design.</h5>
           </div>
-          <a href="/the-journal" class="hero-latest w-inline-block">
+          <a href="<?= $latest ? e($latest['url']) : '/the-journal' ?>" class="hero-latest w-inline-block">
             <div class="hero2-image-collection"></div>
             <div>
               <h5>The Journal</h5>
-              <div class="text-block-12">A place to share good news stories, updates from the studio and helpful advice on design and web topics.</div>
+              <div class="text-block-12"><?= $latest ? 'Latest: ' . e($latest['title']) : 'A place to share good news stories, updates from the studio and helpful advice on design and web topics.' ?></div>
             </div>
           </a>
           <a href="/the-journal" data-w-id="b57a745b-9d24-e8be-e6f9-e49ad3fddd2e" class="button-large hero3-button w-inline-block">

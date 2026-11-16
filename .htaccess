@@ -15,7 +15,7 @@ ErrorDocument 404 /404.php
 RewriteRule ^about/?$ / [R=301,L]
 
 # Keep private folders private.
-RewriteRule ^(includes|dev)(/|$) - [R=404,L]
+RewriteRule ^(includes|templates|content|dev)(/|$) - [R=404,L]
 
 # Old addresses: /work.html, /work.php and /index.html redirect permanently to
 # the clean address (/work, /). THE_REQUEST is what the visitor typed, so this
@@ -30,6 +30,11 @@ RewriteRule ^ /%1 [R=301,L,NE]
 
 # The sitemap is built automatically by sitemap.php.
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Journal categories and articles are built by the-journal.php from the
+# files in content/journal/, e.g. /the-journal/design/design-for-all
+RewriteRule ^the-journal/([a-z0-9-]+)/?$ the-journal.php?category=$1 [L,QSA]
+RewriteRule ^the-journal/([a-z0-9-]+)/([a-z0-9-]+)/?$ the-journal.php?category=$1&slug=$2 [L,QSA]
 
 # Clean addresses: /work loads work.php, /the-journal/design loads
 # the-journal/design.php. Only applies when that .php file exists.

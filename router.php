@@ -15,7 +15,7 @@ $path = rawurldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $root = __DIR__;
 
 // Never serve private folders (same as .htaccess).
-if (preg_match('#^/(includes|dev)(/|$)#', $path) || preg_match('#/\.#', $path)) {
+if (preg_match('#^/(includes|templates|content|dev)(/|$)#', $path) || preg_match('#/\.#', $path)) {
     http_response_code(404);
     require $root . '/404.php';
     return true;
@@ -42,6 +42,14 @@ if ($path !== '/' && is_file($root . $path)) {
 // The sitemap is built by sitemap.php.
 if ($path === '/sitemap.xml') {
     require $root . '/sitemap.php';
+    return true;
+}
+
+// Journal categories and articles (same as .htaccess).
+if (preg_match('#^/the-journal/([a-z0-9-]+)(?:/([a-z0-9-]+))?/?$#', $path, $m)) {
+    $_GET['category'] = $m[1];
+    $_GET['slug'] = $m[2] ?? '';
+    require $root . '/the-journal.php';
     return true;
 }
 
