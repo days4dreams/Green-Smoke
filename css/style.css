@@ -3835,6 +3835,16 @@ textarea {
    Added for pages built from content files (not from Webflow).
    ------------------------------------------------------------------ */
 
+/* Text links: black and underlined, instead of the browser's default blue.
+   Buttons and menu links keep their own colours (their classes set them). */
+a {
+    color: #18181d
+}
+
+a.size4-link[href] {
+    text-decoration: underline
+}
+
 /* One row on a Journal category page. Same layout the Webflow
    export gave each article by ID, so any number of posts can be listed. */
 .article-item {

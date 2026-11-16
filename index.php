@@ -22,7 +22,7 @@ foreach (journal_posts() as $p) {
             <div class="hero2-image-collection"></div>
             <div>
               <h5>The Journal</h5>
-              <div class="text-block-12"><?= $latest ? 'Latest: ' . e($latest['title']) : 'A place to share good news stories, updates from the studio and helpful advice on design and web topics.' ?></div>
+              <div class="text-block-12"><?= $latest ? e($latest['title']) : 'A place to share good news stories, updates from the studio and helpful advice on design and web topics.' ?></div>
             </div>
           </a>
           <a href="/the-journal" data-w-id="b57a745b-9d24-e8be-e6f9-e49ad3fddd2e" class="button-large hero3-button w-inline-block">

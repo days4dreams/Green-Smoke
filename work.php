@@ -27,8 +27,8 @@ $tagsInUse = array_filter($workTags, function ($tag) use ($usedTags) {
         <h5>I craft beautiful goods and services for businesses and individuals. I work across print and digital design, web and user experience.</h5>
       </div>
       <div id="w-node-b19f3a35-5a6e-9d07-f59d-77ddb478b147-e581dee9" class="hero3-image"></div>
-      <a id="w-node-b19f3a35-5a6e-9d07-f59d-77ddb478b148-e581dee9" data-w-id="b19f3a35-5a6e-9d07-f59d-77ddb478b148" href="https://www.behance.net/greensmokestudio?log_shim_removal=1" target="_blank" class="button-large hero2-button w-inline-block">
-        <div class="text-block-7">Visit my Behance portfolio</div><img src="/images/arrow-light2x.svg" alt="" class="button-arrow">
+      <a id="w-node-b19f3a35-5a6e-9d07-f59d-77ddb478b148-e581dee9" data-w-id="b19f3a35-5a6e-9d07-f59d-77ddb478b148" href="#projects" class="button-large hero2-button w-inline-block">
+        <div class="text-block-7">Jump to selected work</div><img src="/images/arrow-light2x.svg" alt="" class="button-arrow">
       </a>
     </div>
   </div>
@@ -53,7 +53,7 @@ $tagsInUse = array_filter($workTags, function ($tag) use ($usedTags) {
     <div class="work-container">
     <div class="blog1-headline-wrap">
       <h4>Selected work</h4>
-      <h3>Recent projects</h3>
+      <h3>Studio work</h3>
     </div>
     <nav class="work-filters" aria-label="Filter projects by type">
       <a href="/work#projects" class="journal-category-link"<?= $activeTag === '' ? ' aria-current="page"' : '' ?>>All</a>
