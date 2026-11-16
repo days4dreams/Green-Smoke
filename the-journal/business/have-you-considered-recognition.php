@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html data-wf-page="6641f6461590de74e874a22d" data-wf-site="663f659b3bb82a36e38d26f1">
-<head>
-  <meta charset="utf-8">
-  <title>Have you considered? Blog Post</title>
-  <meta content="Have you considered? Blog Post" property="og:title">
-  <meta content="Have you considered? Blog Post" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="../../css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="../../css/style.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="../../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="../../images/webclip.png" rel="apple-touch-icon">
-  <?php $pagedepth = 2; ?>
-</head>
-<body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar active-navigation w-nav">
-    <?php include "../../includes/nav.php" ?>
-  </div>
+<?php
+$title = 'Have you considered? How repeating yourself breeds trust';
+$description = 'A short story about an outstanding sweet treat demonstrates the power of recognition in marketing.';
+$wfPage = '6641f6461590de74e874a22d';
+require __DIR__ . '/../../includes/head.php';
+?>
   <div class="wrapper m100-50">
     <div class="section">
       <div class="w-layout-grid headline-grid">
         <div id="w-node-e7eaa082-df6d-6ff2-6a13-fda244d5bb5c-e874a22d">
-        <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="../../the-journal.php" class="button-text">
-      <div class="button-label">The Journal</div><img src="https://uploads-ssl.webflow.com/663a2ce536c5eb4044bca434/663a2ce536c5eb4044bca4dc_arrow-dark%402x.svg" alt="" class="button-arrow"><div class="second-button-label">Business Articles</div>
+        <a data-w-id="af15f62c-5bbc-7199-15f4-0afa6f26462b" href="/the-journal" class="button-text">
+      <div class="button-label">The Journal</div><img src="/images/arrow-dark2x.svg" alt="" class="button-arrow"><div class="second-button-label">Business Articles</div>
           </a>
           <br></br>
           <div class="divider"></div>
@@ -61,8 +48,4 @@
         </div>
     </div>
   </div>
-  <div class="wrapper m0-50">
-    <?php include "includes/footer.php" ?>
-  </div>
-</body>
-</html>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>
