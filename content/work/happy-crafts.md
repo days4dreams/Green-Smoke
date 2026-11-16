@@ -2,7 +2,7 @@
 title: Happy Crafts Art Club
 client: Happy Crafts
 year:
-tags: Branding
+tags: Branding, Web Design
 summary: Bold colours, fun patterns and busy images echo the magic and mayhem of a Happy Crafts class.
 # Add a cover image in /images/work/ and its path here, e.g. /images/work/happy-crafts.jpg
 image:
