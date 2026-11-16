@@ -3892,6 +3892,10 @@ a.size4-link[href] {
     display: block
 }
 
+.work-card-placeholder {
+    background-color: #f2eee8
+}
+
 a:hover > .work-card-image {
     opacity: .8
 }

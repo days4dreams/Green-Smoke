@@ -5,16 +5,22 @@ $linkAttrs = $external ? ' target="_blank" rel="noopener"' : '';
 ?>
       <div>
 <?php if ($project['link']): ?>
-<?php if ($project['image']): ?>
         <a href="<?= e($project['link']) ?>"<?= $linkAttrs ?> class="blog1-image-wrap work-image-link">
+<?php if ($project['image']): ?>
           <?= image_tag($project['image'], $project['image_alt'] ?: $project['title'], 'work-card-image') ?>
-        </a>
+<?php else: /* no image yet: a plain block keeps the grid even */ ?>
+          <span class="work-card-image work-card-placeholder" role="img" aria-label="<?= e($project['title']) ?>"></span>
 <?php endif; ?>
+        </a>
         <a href="<?= e($project['link']) ?>"<?= $linkAttrs ?> class="size4-link"><?= e($project['title']) ?><?= $project['draft'] === true ? ' (Draft)' : '' ?></a>
 <?php else: ?>
+        <div class="blog1-image-wrap">
 <?php if ($project['image']): ?>
-        <div class="blog1-image-wrap"><?= image_tag($project['image'], $project['image_alt'] ?: $project['title'], 'work-card-image') ?></div>
+          <?= image_tag($project['image'], $project['image_alt'] ?: $project['title'], 'work-card-image') ?>
+<?php else: ?>
+          <span class="work-card-image work-card-placeholder" role="img" aria-label="<?= e($project['title']) ?>"></span>
 <?php endif; ?>
+        </div>
         <p class="size4-link"><?= e($project['title']) ?><?= $project['draft'] === true ? ' (Draft)' : '' ?></p>
 <?php endif; ?>
 <?php if ($project['tags']): ?>

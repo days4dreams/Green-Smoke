@@ -2,13 +2,11 @@
 title: Cowell's Garden Centre
 client: Cowell's Garden Centre
 year:
-tags: Branding
-summary: Add a one-sentence summary of the project.
-# Add a cover image in /images/work/ and its path here
-image:
-image_alt:
-# Add the project's Behance address, check the tags, then change draft to false
-link:
+tags: Branding, Digital Design
+summary: A successful brand refresh for this award-winning garden centre.
+image: /images/digital-design-image.jpg
+image_alt: Cowell's Garden Centre Instagram feed on a phone
+link: https://www.behance.net/gallery/195968859/Cowells
 featured: false
-draft: true
+draft: false
 ---
