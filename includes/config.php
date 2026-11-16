@@ -22,6 +22,45 @@ $site = [
     'default_image'  => '/images/green-field-smoke-p-1600.jpg',
 ];
 
+/**
+ * Journal categories. The key (e.g. 'design') is the web address:
+ * /the-journal/design. Changing a key changes the address, so prefer
+ * changing only the name and text. A category only appears in the
+ * Journal menu once it has at least one post (or "coming soon" post).
+ */
+$categories = [
+    'design' => [
+        'name'  => 'Thoughts on Design',
+        'intro' => 'I discuss topics from the world of print, digital, web and user experience design.',
+        'blurb' => 'Interested in design? You\'re in the right place.',
+        'image' => '/images/open-book-on-typography.jpg', // used when a post has no image
+    ],
+    'business' => [
+        'name'  => 'Small Business Support',
+        'intro' => 'I discuss topics from the world of small business, freelance and creativity in the North East.',
+        'blurb' => 'Interested in small business? You\'re in the right place.',
+        'image' => '/images/business-setup.jpg',
+    ],
+    'case-studies' => [
+        'name'  => 'Case Studies',
+        'intro' => 'A closer look at recent projects: the brief, the thinking and the results.',
+        'blurb' => 'Curious how a project comes together? You\'re in the right place.',
+        'image' => '/images/multi-portfolio.jpg',
+    ],
+    'studio' => [
+        'name'  => 'Studio Updates',
+        'intro' => 'I share stories from life at Green Smoke Studio, including client work and life as a designer.',
+        'blurb' => 'Here, you\'ll find the latest news from Green Smoke Studio.',
+        'image' => '/images/lauren-coffee.jpg',
+    ],
+];
+
+/**
+ * Work tags, in the order the filter buttons appear on the Work page.
+ * A project can have any number of these (see content/work/).
+ */
+$workTags = ['UX Design', 'Branding', 'Printed Materials', 'Web Design', 'Web Development', 'Digital Design'];
+
 /** Escape text before printing it into HTML. Use for anything that isn't hard-coded markup. */
 function e($text)
 {
