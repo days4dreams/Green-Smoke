@@ -1,0 +1,37 @@
+# Green Smoke Studio — web server rules (Apache, Krystal cPanel hosting)
+# router.php copies these rules for local previews, so update both together.
+
+RewriteEngine On
+
+# Folders like /the-journal/ share a name with pages like the-journal.php.
+# Stop Apache adding a trailing slash to /the-journal, so the page loads directly.
+DirectorySlash Off
+
+# The 404 page (it sends a real "not found" status).
+ErrorDocument 404 /404.php
+
+# /about has no page yet, so send visitors to the homepage.
+# REMOVE this rule when the About page is published.
+RewriteRule ^about/?$ / [R=301,L]
+
+# Keep private folders private.
+RewriteRule ^(includes|dev)(/|$) - [R=404,L]
+
+# Old addresses: /work.html, /work.php and /index.html redirect permanently to
+# the clean address (/work, /). THE_REQUEST is what the visitor typed, so this
+# doesn't interfere with the internal rewrite further down. REDIRECT_STATUS is
+# empty only for the visitor's original request (not while showing the 404 page).
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?]
+RewriteRule ^ / [R=301,L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.(html|php)[\s?]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# The sitemap is built automatically by sitemap.php.
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Clean addresses: /work loads work.php, /the-journal/design loads
+# the-journal/design.php. Only applies when that .php file exists.
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
