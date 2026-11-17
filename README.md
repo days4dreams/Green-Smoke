@@ -13,6 +13,7 @@ Journal posts and Work projects are simple text files in `content/`.
 3. Write the article under the second `---` line. A blank line starts a new
    paragraph; `### text` is a large pull quote, `##### text` a small heading,
    `[words](https://link)` a link.
+   See **Text styles** below for everything you can type.
 4. Optional image: put it in `images/journal/` and set `image:` to its path.
 5. Leave `draft: true` while writing. Drafts only appear when you preview on
    your own computer. Change it to `draft: false` to publish.
@@ -27,6 +28,33 @@ without a page.
 
 **Categories** (names, intro text, default images) are set in
 `includes/config.php`. A category appears in the Journal menu once it has a post.
+
+### Text styles
+
+What to type in a post, and what you get. To see them all in your site's
+look, preview locally and open
+http://localhost:8000/the-journal/studio/style-guide (it's a draft, so it's
+never published; the file is `content/journal/style-guide.md`).
+
+| Type this | You get |
+| --- | --- |
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `[words](https://example.com)` | a link (other websites open in a new tab) |
+| `[words](/work)` | a link to a page on your own site |
+| `## Heading` | large heading in Playfair Display |
+| `### Text` | pull quote: big, light statement |
+| `#### Text` | soft, faded subheading |
+| `##### Text` | small heading (used for numbered points) |
+| `###### Text` | small faded capitals, for a label |
+| `> Text` | quote with a grey bar down the left |
+| `- item` (one per line) | bulleted list |
+| `1. item` (one per line) | numbered list |
+| `![description](/images/journal/photo.jpg)` | an image |
+| `---` on its own line | dividing line |
+| `<br>` on its own line | extra space (e.g. above and below a pull quote) |
+
+Leave a blank line between paragraphs, headings and lists.
 
 ## Add a Work project
 
