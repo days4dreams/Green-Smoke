@@ -13,7 +13,8 @@ Journal posts and Work projects are simple text files in `content/`.
 3. Write the article under the second `---` line. A blank line starts a new
    paragraph; `### text` is a large pull quote, `##### text` a small heading,
    `[words](https://link)` a link.
-4. Optional image: put it in `images/journal/` and set `image:` to its path.
+   See **Text styles** below for everything you can type.
+4. Optional preview image: see **Post preview image** below.
 5. Leave `draft: true` while writing. Drafts only appear when you preview on
    your own computer. Change it to `draft: false` to publish.
 6. Commit in GitHub Desktop. The Journal page, category page, homepage
@@ -27,6 +28,59 @@ without a page.
 
 **Categories** (names, intro text, default images) are set in
 `includes/config.php`. A category appears in the Journal menu once it has a post.
+
+### Post preview image
+
+Set it with two lines at the top of the post's file:
+
+```
+image: /images/journal/my-post-photo.jpg
+image_alt: A short description of the photo
+```
+
+- **Where it shows:** the post's card on the Journal page, and the preview
+  when someone shares the post on LinkedIn, Facebook and so on. Category
+  pages are a text list, so they don't show it.
+- **No `image:` line?** The post uses its category's default image (set in
+  `includes/config.php`), e.g. the open book photo for Thoughts on Design.
+- **The photo:** a landscape JPG or WebP, about 1600px wide. The card is
+  260px tall and crops to fill, so keep the subject near the middle.
+- **Uploading it:** on github.com, open `images/journal/` and click
+  **Add file** → **Upload files**; or in GitHub Desktop, drag it into that
+  folder on your Mac and commit. Then put its path on the `image:` line,
+  starting with `/images/journal/`.
+- **`image_alt`:** a short description for people using screen readers,
+  e.g. `Lauren sketching logo ideas at her desk`. It also helps search engines.
+- **Check it first:** while the post is a draft, its card shows on the
+  Journal page in your local preview (http://localhost:8000/the-journal),
+  marked "(Draft)".
+
+### Text styles
+
+What to type in a post, and what you get. To see them all in your site's
+look, preview locally and open
+http://localhost:8000/the-journal/studio/style-guide (it's a draft, so it's
+never published; the file is `content/journal/style-guide.md`).
+
+| Type this | You get |
+| --- | --- |
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `[words](https://example.com)` | a link (other websites open in a new tab) |
+| `[words](/work)` | a link to a page on your own site |
+| `## Heading` | large heading in Playfair Display |
+| `### Text` | pull quote: big, light statement |
+| `#### Text` | soft, faded subheading |
+| `##### Text` | small heading (used for numbered points) |
+| `###### Text` | small faded capitals, for a label |
+| `> Text` | quote with a grey bar down the left |
+| `- item` (one per line) | bulleted list |
+| `1. item` (one per line) | numbered list |
+| `![description](/images/journal/photo.jpg)` | an image |
+| `---` on its own line | dividing line |
+| `<br>` on its own line | extra space (e.g. above and below a pull quote) |
+
+Leave a blank line between paragraphs, headings and lists.
 
 ## Add a Work project
 
