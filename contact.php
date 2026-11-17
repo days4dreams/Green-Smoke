@@ -27,9 +27,21 @@ require __DIR__ . '/includes/head.php';
       <div id="w-node-_4e659e8c-17fb-6a25-20fb-07cfdb3a8057-1936834c" class="content23-item-wrap">
         <div class="content23-item">
           <h3>Contact details</h3>
-          <p>LinkedIn<br>
-            <a href="<?= e($site['social']['linkedin']) ?>" target="_blank">linkedin.com/in/lauren-jane-young<br></a><br>Email <br>
-            <a href="mailto:<?= e($site['email']) ?>?subject=Website%20contact"><?= e($site['email']) ?><br></a>
+<?php
+// Each line: heading, link, and the text shown. Links live in includes/config.php.
+$contactLinks = [
+    ['Email', 'mailto:' . $site['email'] . '?subject=Website%20contact', $site['email']],
+    ['LinkedIn', $site['social']['linkedin'], 'linkedin.com/in/lauren-jane-young'],
+    ['Instagram', $site['social']['instagram'], '@greensmokestudio'],
+    ['Facebook', $site['social']['facebook'], 'facebook.com/greensmokestudio'],
+    ['Google Reviews', $site['social']['google_review'], 'Leave a review on Google'],
+];
+?>
+          <p>
+<?php foreach ($contactLinks as $i => [$heading, $url, $text]): ?>
+            <?= $i ? '<br>' : '' ?><?= e($heading) ?><br>
+            <a href="<?= e($url) ?>"<?= strpos($url, 'http') === 0 ? ' target="_blank" rel="noopener"' : '' ?>><?= e($text) ?></a><br>
+<?php endforeach; ?>
           </p>
         </div>
       </div>

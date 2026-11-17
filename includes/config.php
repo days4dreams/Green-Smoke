@@ -16,7 +16,10 @@ $site = [
     'social' => [
         'linkedin' => 'https://www.linkedin.com/in/lauren-jane-young/',
         'behance'  => 'https://www.behance.net/greensmokestudio',
-        // Add more here when ready, e.g. 'facebook' => 'https://...'
+        'facebook' => 'https://www.facebook.com/greensmokestudio',
+        'instagram' => 'https://www.instagram.com/greensmokestudio/',
+        // Google Business Profile link that opens the "write a review" box
+        'google_review' => 'https://g.page/r/CZaHg_ASB42CEAE/review',
     ],
     // Image shown when a page is shared on social media, unless the page sets its own.
     'default_image'  => '/images/green-field-smoke-p-1600.jpg',
