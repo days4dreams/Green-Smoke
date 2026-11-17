@@ -5,6 +5,8 @@ category: studio
 summary: Work doesn’t have to live between nine and five.
 author: Lauren Young
 draft: false
+image: /images/journal/blog-privilege.jpg
+image_alt: A short description of the photo
 ---
 It’s Sunday afternoon. The house is quiet, the coffee’s on, and I’ve got an hour or two at my desk. Some people might call that working the weekend. I call it a privilege.
 
