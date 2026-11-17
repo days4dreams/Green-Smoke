@@ -14,7 +14,7 @@ Journal posts and Work projects are simple text files in `content/`.
    paragraph; `### text` is a large pull quote, `##### text` a small heading,
    `[words](https://link)` a link.
    See **Text styles** below for everything you can type.
-4. Optional image: put it in `images/journal/` and set `image:` to its path.
+4. Optional preview image: see **Post preview image** below.
 5. Leave `draft: true` while writing. Drafts only appear when you preview on
    your own computer. Change it to `draft: false` to publish.
 6. Commit in GitHub Desktop. The Journal page, category page, homepage
@@ -28,6 +28,32 @@ without a page.
 
 **Categories** (names, intro text, default images) are set in
 `includes/config.php`. A category appears in the Journal menu once it has a post.
+
+### Post preview image
+
+Set it with two lines at the top of the post's file:
+
+```
+image: /images/journal/my-post-photo.jpg
+image_alt: A short description of the photo
+```
+
+- **Where it shows:** the post's card on the Journal page, and the preview
+  when someone shares the post on LinkedIn, Facebook and so on. Category
+  pages are a text list, so they don't show it.
+- **No `image:` line?** The post uses its category's default image (set in
+  `includes/config.php`), e.g. the open book photo for Thoughts on Design.
+- **The photo:** a landscape JPG or WebP, about 1600px wide. The card is
+  260px tall and crops to fill, so keep the subject near the middle.
+- **Uploading it:** on github.com, open `images/journal/` and click
+  **Add file** → **Upload files**; or in GitHub Desktop, drag it into that
+  folder on your Mac and commit. Then put its path on the `image:` line,
+  starting with `/images/journal/`.
+- **`image_alt`:** a short description for people using screen readers,
+  e.g. `Lauren sketching logo ideas at her desk`. It also helps search engines.
+- **Check it first:** while the post is a draft, its card shows on the
+  Journal page in your local preview (http://localhost:8000/the-journal),
+  marked "(Draft)".
 
 ### Text styles
 
