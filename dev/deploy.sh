@@ -37,7 +37,7 @@ trap 'rm -rf "$WORK"' EXIT
 # --- 1. Which files go to the server -------------------------------------
 # Everything in the repo except developer files.
 git ls-files \
-  | grep -vE '^(\.git|\.github/|dev/|README\.md$|router\.php$)' \
+  | grep -vE '^(\.git|\.github/|dev/|README\.md$|CLAUDE\.md$|router\.php$)' \
   | sort > "$WORK/files"
 
 # Refuse odd file names (spaces, quotes...) rather than risk a bad upload.
